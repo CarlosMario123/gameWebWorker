@@ -88,6 +88,7 @@ export default class Tanque {
               
 
             this.sonar()
+
             this.tiempoDisparo = Date.now();
         }
     }

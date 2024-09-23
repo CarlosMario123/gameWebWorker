@@ -1,6 +1,6 @@
 const sounds = {
     disparo: new Audio('resource/sounds/disparo.mp3'),
-    okay: new Audio('resource/sounds/disparookay.mp3'),
+    okay: new Audio('resource/sounds/okay.mp3'),
     okay2: new Audio('resource/sounds/okay2.mp3'),
     yaha: new Audio('resource/sounds/YAHA.mp3'),
     galopeo: new Audio('resource/sounds/galopeo.mp3'),

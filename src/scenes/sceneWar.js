@@ -134,6 +134,8 @@ export default class SceneWar {
             });
         }
 
+      
+
         this.enemies = verifyDestroyEnemy(this.enemies, this.tanque, () => {
             this.enemiesDestroyed++;
         });
@@ -193,4 +195,6 @@ export default class SceneWar {
             this.sceneWorker.terminate()
         }
     }
+
+    
 }

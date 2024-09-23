@@ -1,5 +1,6 @@
 import FactoryEnemigos from "../modelos/enemigos/factoryEnemigos.js";
 
+
 export function createEnemies(context,canvasWidth,canvasH, getPositionTank, acabar,enemiesDestroy, setEnemies) {
     const enemyWorker = new Worker("src/WebWorkers/enemyWorker.js", { type: 'module' });
   
@@ -11,9 +12,13 @@ export function createEnemies(context,canvasWidth,canvasH, getPositionTank, acab
         }
     };
 
+
+
     enemyWorker.postMessage({ action: 'generateEnemies', data: { count: enemiesDestroy,canvasWidth,canvasH } }); 
     return enemyWorker;
 }
+
+
 
 function generateEnemies(count, context, getPositionTank, acabar,enemies) {
     let enemiesSend = [];
@@ -30,6 +35,7 @@ function generateEnemies(count, context, getPositionTank, acabar,enemies) {
 export function verifyDestroyEnemy(enemies, tanque, destroyEnemies) {
     enemies.forEach(enemy => {
         enemy.checkCollision(tanque.proyectiles);
+    
     });
 
    
